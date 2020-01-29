@@ -1,25 +1,22 @@
 public class Account
 {
     private double bal;  //The current balance
-    private int accnum;  //The account number
-    
-    
-    public Account(int a)
-    {    
-	bal=0.0;
-	accnum=a;
+    private final int accnum; // The account number
+    private double rate;
+
+    public Account(final int a) {
+        bal = 0.0;
+        accnum = a;
     }
-    
-    public void deposit(double sum)
-    {
-	if (sum>0)
-	    bal+=sum;    
-	else
-	    System.err.println("Account.deposit(...): "
-			       +"cannot deposit negative amount.");    
+
+    public void deposit(final double sum) {
+        if (sum > 0)
+            bal += sum;
+        else
+            System.err.println("Account.deposit(...): " + "cannot deposit negative amount.");
     }
-    
-    public void withdraw(double sum)
+
+    public void withdraw(final double sum)
     {
 	if (sum>0)
 	    bal-=sum;    
@@ -27,7 +24,7 @@ public class Account
 	    System.err.println("Account.withdraw(...): "
 			       +"cannot withdraw negative amount.");    
     }
-    
+   
     public double getBalance()
     {
 	return bal;

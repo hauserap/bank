@@ -1,9 +1,9 @@
 public class SavingsAccount extends Account{
 
-public SavingsAccount(double rate){
-   interestRate = rate;
-   
-}
+   public SavingsAccount(int rate) {
+      super(rate);
+      
+   }
 
 public void addInterest()
 {
