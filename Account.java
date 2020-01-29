@@ -2,7 +2,7 @@ public class Account
 {
     private double bal;  //The current balance
     private final int accnum; // The account number
-    private double rate;
+   
 
     public Account(final int a) {
         bal = 0.0;
